@@ -1,0 +1,127 @@
+    //telnet localhost  建立聊天服务器
+    //inconfig获取主机IP
+    //ping 拼接IP
+    public static void main(String[] arges) {
+
+        /*-------------服务器发送文字给客户端----------------*/
+
+        // ServerSocket server_socket = null;
+        //try {
+        //创建服务端
+//            server_socket = new ServerSocket(8756);
+//            Socket socket=server_socket.accept();
+//            //向客户端发送信息
+//            OutputStream o=socket.getOutputStream();
+//            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(o));
+//            bw.write("我是能能");
+//            bw.flush();//刷新
+//            bw.close();//关闭流
+
+        /*-------------接受客户端文字数据----------------*/
+
+//            ServerSocket serverSocket = new ServerSocket(2582);
+//            while (true){
+//                Socket socket_is = serverSocket.accept();
+//                System.out.println("得到客户端连接：" + socket_is);
+//                startReader(socket_is);
+//            }
+
+
+        /*-------------接受客户端图片数据----------------*/
+//            System.out.println("开始接收信息");
+//          ServerSocket server_so_img = null;
+//        try {
+//            server_so_img = new ServerSocket(8756);
+//            Socket socket = server_so_img.accept();
+//            DataInputStream dataInputStream = new DataInputStream(socket.getInputStream());
+//            new Thread(){
+//                @Override
+//                public void run() {
+//                    super.run();
+//                    while (true){
+//
+//                        try {
+//                            long len = 0;
+//                            len = dataInputStream.readLong();
+//                            System.out.println("接受客户端图片长度 = "+ len);
+//                            byte[] bytes = new byte[(int) len];
+//                            dataInputStream.readFully(bytes);
+//
+//                            File file = new File("C:\\img\\"+len+".png");
+//                            FileOutputStream fileOutputStream = new FileOutputStream(file);
+//                            fileOutputStream.write(bytes);
+//                            System.out.println("ok,保持到文件目录");
+//
+////                            dataInputStream.close();
+////                            socket.close();
+////                            server_so_img.close();
+//
+//                        } catch (IOException e) {
+//                            e.printStackTrace();
+//                        }
+//                    }
+//                }
+//            }.start();
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+
+
+
+        /*服务器发送图片给客户端*/
+//            new Thread(){
+//                @Override
+//                public void run() {
+//
+//                    System.out.println("发送图片信息");
+//                    ServerSocket server_so_img = null;
+//                    try {
+//                        server_so_img = new ServerSocket(8756);
+//                        while (true){
+//                            Socket socket = server_so_img.accept();
+//                            System.out.println("连接了8756");
+//                            DataOutputStream dos = new DataOutputStream(socket.getOutputStream());
+//                            FileInputStream fis = new FileInputStream("C:\\\\img\\\\img.png");
+//                            int size = fis.available();
+//                            byte[] data = new byte[size];
+//                            fis.read(data);
+//                            dos.writeInt(size);
+//                            dos.write(data);
+//                            dos.flush();
+//                            fis.close();
+//
+//                        }
+//                    } catch (IOException e) {
+//                        e.printStackTrace();
+//                    }
+//
+//                }
+//            }.start();
+//
+//
+//
+//    }
+        //接受客户文字端信息
+//    private static void startReader(final Socket socket){
+//        new Thread(){
+//            @Override
+//            public void run() {
+//                super.run();
+//                DataInputStream reader;
+//                try {
+//                    //获取读取流
+//                    reader = new DataInputStream(socket.getInputStream());
+//                    while (true){
+//                        System.out.println("*等待客户端输入*");
+//                        String msg = reader.readUTF();
+//                        System.out.println("获取到客户端的信息：" + msg);
+//                    }
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }.start();
+//    }
+    }
+}

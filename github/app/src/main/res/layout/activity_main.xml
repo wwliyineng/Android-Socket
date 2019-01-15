@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/connect_bu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="连接是否成功" />
+
+        <TextView
+            android:id="@+id/connect_tv"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/send_bu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送" />
+
+        <EditText
+            android:id="@+id/sockte_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="发数据给服务器"
+            tools:ignore="TextFields" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="6dp">
+        <Button
+            android:id="@+id/so_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="发送图片给服务器"/>
+        <ImageView
+            android:id="@+id/so_img_iv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/img_bu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="获取服务器图片"/>
+        <ImageView
+            android:id="@+id/img_img"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/obtain_bu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="获取服务器数据" />
+
+        <TextView
+            android:id="@+id/obtain_tv"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:padding="5dp" />
+    </LinearLayout>
+
+</LinearLayout>
